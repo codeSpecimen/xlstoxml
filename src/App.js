@@ -1,8 +1,6 @@
 import logo from './logo.svg';
 import { useEffect, useState } from "react";
 import './App.css';
-import { json2xml } from 'xml-js';
-import { toXML } from 'jstoxml';
 
 function App() {
   const [xml, setXml] = useState()
