@@ -23,7 +23,13 @@ function App() {
       let row = doc.createElement("ROW");
 
       workbook.SheetNames.forEach((sheet, index) => {
-        if(index === 2) { //3rd sheet
+        let ind;
+        if(index.length > 0) {
+          ind = 2;
+        }else {
+          ind = 0;
+        }
+        if(index === ind) { //3rd sheet
           //xls to json
           let rowObject = XLSX.utils.sheet_to_row_object_array(workbook.Sheets[sheet], {defval: null});
           console.log('ROWOBJECT', rowObject, sheet, index)
